@@ -19,7 +19,10 @@ const Header = ({ currentUser }) => (
       <Link className='option' to='/shop'>
         CONTACT
       </Link>
-      {currentUser ? (
+
+      {
+        // We are passing in the currentUser to this component, then we're checking if user exists. If user signed in then show sign In.if not then Sign in
+      currentUser ? (
         <div className='option' onClick={() => auth.signOut()}>
           SIGN OUT
         </div>
